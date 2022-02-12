@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "poi-canopy-processor"
+name = "pois-processor"
 version = "1.0.0"
 description = "Processing engine to map geohashes to POIs"
 authors = ["Ignacio"]
 readme = "README.md"
-repository = "https://github.com/ignacio-ibanez/poi_canopy"
+repository = "https://github.com/ignacio-ibanez/pois-processor"
 
 [tool.poetry.dependencies]
 python = "^3.8.12"

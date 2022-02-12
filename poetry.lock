@@ -502,6 +502,14 @@ optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
+name = "py4j"
+version = "0.10.9.3"
+description = "Enables Python programs to dynamically access arbitrary Java objects"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pycodestyle"
 version = "2.8.0"
 description = "Python style guide checker"
@@ -543,6 +551,23 @@ python-versions = ">=3.6"
 
 [package.extras]
 diagrams = ["jinja2", "railroad-diagrams"]
+
+[[package]]
+name = "pyspark"
+version = "3.2.1"
+description = "Apache Spark Python API"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+py4j = "0.10.9.3"
+
+[package.extras]
+ml = ["numpy (>=1.7)"]
+mllib = ["numpy (>=1.7)"]
+pandas_on_spark = ["numpy (>=1.14)", "pandas (>=0.23.2)", "pyarrow (>=1.0.0)"]
+sql = ["pandas (>=0.23.2)", "pyarrow (>=1.0.0)"]
 
 [[package]]
 name = "pytest"
@@ -724,7 +749,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8.12"
-content-hash = "63ad83fd39f3e8d2693b4d78c2f8529ebc540812abb292ba8974b411d3bbd782"
+content-hash = "57ae1ab98d970082309d82b9244dfd3f898a4041b2bfe9afa4b67af9da97f68d"
 
 [metadata.files]
 atomicwrites = [
@@ -997,6 +1022,10 @@ py = [
     {file = "py-1.11.0-py2.py3-none-any.whl", hash = "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"},
     {file = "py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
 ]
+py4j = [
+    {file = "py4j-0.10.9.3-py2.py3-none-any.whl", hash = "sha256:04f5b06917c0c8a81ab34121dda09a2ba1f74e96d59203c821d5cb7d28c35363"},
+    {file = "py4j-0.10.9.3.tar.gz", hash = "sha256:0d92844da4cb747155b9563c44fc322c9a1562b3ef0979ae692dbde732d784dd"},
+]
 pycodestyle = [
     {file = "pycodestyle-2.8.0-py2.py3-none-any.whl", hash = "sha256:720f8b39dde8b293825e7ff02c475f3077124006db4f440dcbc9a20b76548a20"},
     {file = "pycodestyle-2.8.0.tar.gz", hash = "sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f"},
@@ -1016,6 +1045,9 @@ pylev = [
 pyparsing = [
     {file = "pyparsing-3.0.7-py3-none-any.whl", hash = "sha256:a6c06a88f252e6c322f65faf8f418b16213b51bdfaece0524c1c1bc30c63c484"},
     {file = "pyparsing-3.0.7.tar.gz", hash = "sha256:18ee9022775d270c55187733956460083db60b37d0d0fb357445f3094eed3eea"},
+]
+pyspark = [
+    {file = "pyspark-3.2.1.tar.gz", hash = "sha256:0b81359262ec6e9ac78c353344e7de026027d140c6def949ff0d80ab70f89a54"},
 ]
 pytest = [
     {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
