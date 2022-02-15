@@ -9,6 +9,10 @@ repository = "https://github.com/ignacio-ibanez/pois-processor"
 [tool.poetry.dependencies]
 python = "^3.8.12"
 poetry = "^1.1.11"
+pyspark = "3.2.1"
+python-geohash = "0.8.5"
+Shapely = "1.8.0"
+geolib = "1.0.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
